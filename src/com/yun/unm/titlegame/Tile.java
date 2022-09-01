@@ -1,6 +1,6 @@
 package com.yun.unm.titlegame;
 
-public class Titles {
+public class Tile {
     // add a comment
 
     public static void main(String[] args) {
