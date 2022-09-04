@@ -1,4 +1,5 @@
-package sample;
+package com.yun.unm.titlegame;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.geometry.Orientation;
@@ -7,7 +8,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.stage.Stage;
 
-public class MainView2 extends Application {
+public class MainView extends Application {
     @Override
     public void start(Stage stage) {
         //Creating the tile pane

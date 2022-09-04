@@ -1,26 +1,23 @@
 package com.yun.unm.titlegame;
 
 import javafx.event.EventHandler;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
-import javafx.scene.shape.TriangleMesh;
-
 import java.util.Random;
 
 public class Tile extends StackPane {
-    private static Random random =new Random();
+    private static final Random random =new Random();
     private static Tile firstTile=null;
-    private Color shape1Color;
+    private final Color shape1Color;
     private Color shape2Color;
     private Color shape3Color;
-    private Shape shape1;
-    private Shape shape2;
-    private Shape shape3;
+    private final Shape shape1;
+    private final Shape shape2;
+    private final Shape shape3;
     int currentStreak = 0;
     int longestStreak = 0;
 
@@ -77,7 +74,7 @@ public class Tile extends StackPane {
             System.out.println("shape3 matches");
             tileMatches=true;
         }
-        if(tileMatches==true){
+        if(tileMatches){
             currentStreak+=1;
             longestStreak+=1;
         }else{
