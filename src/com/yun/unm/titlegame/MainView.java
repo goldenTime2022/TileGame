@@ -8,6 +8,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.stage.Stage;
 
+import java.awt.*;
+
 public class MainView extends Application {
     @Override
     public void start(Stage stage) {
@@ -29,7 +31,7 @@ public class MainView extends Application {
             Tile tile =new Tile();
             tilePane.getChildren().add(tile);
         }
-
+        TextField
         Scene scene = new Scene(tilePane, 730, 730);
         stage.setTitle("stackPane inside tilePane");
         stage.setScene(scene);

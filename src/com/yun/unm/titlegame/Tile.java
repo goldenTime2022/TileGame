@@ -21,7 +21,6 @@ public class Tile extends StackPane {
     int currentStreak = 0;
     int longestStreak = 0;
 
-
     public Tile(){
         shape1Color=getColor();
         do {
@@ -54,25 +53,26 @@ public class Tile extends StackPane {
         });
     }
     public boolean compareTiles(Tile tile){
-
         boolean tileMatches = false;
-        if(shape1Color.equals(tile.shape1Color) && shape1.equals(tile.shape1)){
-            getChildren().remove(shape1);
-            tile.getChildren().remove(tile.shape1);
-            System.out.println("shape1 matches");
-            tileMatches=true;
-        }
-        if(shape2Color.equals(tile.shape2Color) && shape2.equals(tile.shape2)){
-            getChildren().remove(shape2);
-            tile.getChildren().remove(tile.shape2);
-            System.out.println("shape2 matches");
-            tileMatches=true;
-        }
-        if(shape3Color.equals(tile.shape3Color) && shape3.equals(tile.shape3)){
-            getChildren().remove(shape3);
-            tile.getChildren().remove(tile.shape3);
-            System.out.println("shape3 matches");
-            tileMatches=true;
+        if(this!=tile) {
+            if (shape1Color.equals(tile.shape1Color) && shape1.equals(tile.shape1)) {
+                getChildren().remove(shape1);
+                tile.getChildren().remove(tile.shape1);
+                System.out.println("shape1 matches");
+                tileMatches = true;
+            }
+            if (shape2Color.equals(tile.shape2Color) && shape2.equals(tile.shape2)) {
+                getChildren().remove(shape2);
+                tile.getChildren().remove(tile.shape2);
+                System.out.println("shape2 matches");
+                tileMatches = true;
+            }
+            if (shape3Color.equals(tile.shape3Color) && shape3.equals(tile.shape3)) {
+                getChildren().remove(shape3);
+                tile.getChildren().remove(tile.shape3);
+                System.out.println("shape3 matches");
+                tileMatches = true;
+            }
         }
         if(tileMatches){
             currentStreak+=1;
